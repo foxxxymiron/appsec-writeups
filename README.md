@@ -13,13 +13,15 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 5:** SQLite Database & CRUD - *Completed in `appsec-messenger-flask` repo*
 - [x] **Stage 6:** SQL Injection (In-band / UNION) - *Completed (see `sql-injection/` folder)*
 - [x] **Stage 7:** Blind SQL Injection (Time, Boolean, Error) - *Completed (see `blind-sql-injection/` folder)*
-- [ ] **Stage 8+:** XSS, CSRF, SSRF, etc. - *In progress*
+- [x] **Stage 8:** Cross-Site Scripting (XSS) - *Completed (see `xss/` folder)*
+- [ ] **Stage 9+:** CSRF, SSRF, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
 - **SQL Injection (SQLi):** UNION-based attacks, Authentication Bypass, Data Exfiltration.
 - **Blind SQL Injection:** Time-based, Boolean-based, and Error-based inference. Automation via Python scripts.
-- *More to come: XSS, CSRF, SSRF, etc.*
+- **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass.
+- *More to come: CSRF, SSRF, etc.*
 
 ## 📂 Repository Structure
 
@@ -32,10 +34,13 @@ appsec-writeups/
 │   ├── screenshots/
 │   ├── scripts/            # Exploit automation scripts
 │   ├── 01-blind-time-retrieval.md
-│   ├── 02-blind-boolean.md
-│   ├── 03-blind-error.md
-│   ├── 04-full-db-dump.md
-│   └── 05-protection-methods.md
+│   └── ...
+├── xss/                    # Cross-Site Scripting writeups
+│   ├── screenshots/
+│   ├── 01-reflected-xss.md
+│   ├── 02-stored-xss.md
+│   ├── 03-dom-xss.md
+│   └── 04-attribute-xss.md
 └── README.md
 ```
 
@@ -67,6 +72,14 @@ For each lab, the writeup follows a standard structure:
 | 03 | Conditional errors (Error-based) | Practitioner | [View Writeup](blind-sql-injection/03-blind-error.md) |
 | 04 | Full Database Dump (Automation) | Custom | [View Writeup](blind-sql-injection/04-full-db-dump.md) |
 | 05 | Protection Methods Comparison | Theory | [View Writeup](blind-sql-injection/05-protection-methods.md) |
+
+### Cross-Site Scripting (XSS)
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | Reflected XSS into HTML context | Apprentice | [View Writeup](xss/01-reflected-xss.md) |
+| 02 | Stored XSS into HTML context | Apprentice | [View Writeup](xss/02-stored-xss.md) |
+| 03 | DOM XSS in document.write sink | Apprentice | [View Writeup](xss/03-dom-xss.md) |
+| 04 | Reflected XSS into attribute | Practitioner | [View Writeup](xss/04-attribute-xss.md) |
 
 ---
 

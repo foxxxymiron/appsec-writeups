@@ -22,7 +22,7 @@ The application's search functionality reflects the user's input directly into t
 ### Payload Injection
 ![XSS Payload](screenshots/01-xss-payload.png)
 
-### Alert Execution (PoC)
+### Alert Execution (PoC)  
 ![XSS Alert](screenshots/02-xss-alert.png)
 
 ### Lab Solved

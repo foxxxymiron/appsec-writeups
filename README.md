@@ -14,13 +14,14 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 6:** SQL Injection (In-band / UNION) - *Completed (see `sql-injection/` folder)*
 - [x] **Stage 7:** Blind SQL Injection (Time, Boolean, Error) - *Completed (see `blind-sql-injection/` folder)*
 - [x] **Stage 8:** Cross-Site Scripting (XSS) - *Completed (see `xss/` folder)*
-- [ ] **Stage 9+:** CSRF, SSRF, etc. - *In progress*
+- [x] **Stage 9:** DOM-based XSS - *Completed (see `dom-xss/` folder)*
+- [ ] **Stage 10+:** CSRF, SSRF, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
 - **SQL Injection (SQLi):** UNION-based attacks, Authentication Bypass, Data Exfiltration.
 - **Blind SQL Injection:** Time-based, Boolean-based, and Error-based inference. Automation via Python scripts.
-- **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass.
+- **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass, jQuery sinks.
 - *More to come: CSRF, SSRF, etc.*
 
 ## 📂 Repository Structure
@@ -35,12 +36,18 @@ appsec-writeups/
 │   ├── scripts/            # Exploit automation scripts
 │   ├── 01-blind-time-retrieval.md
 │   └── ...
-├── xss/                    # Cross-Site Scripting writeups
+├── xss/                    # Cross-Site Scripting writeups (Reflected / Stored)
 │   ├── screenshots/
 │   ├── 01-reflected-xss.md
 │   ├── 02-stored-xss.md
 │   ├── 03-dom-xss.md
 │   └── 04-attribute-xss.md
+├── dom-xss/                # DOM-based XSS writeups
+│   ├── screenshots/
+│   ├── 01-dom-innerhtml.md
+│   ├── 02-dom-jquery.md
+│   ├── 03-dom-jquery-selector.md
+│   └── 04-document-write-select.md
 └── README.md
 ```
 
@@ -80,6 +87,14 @@ For each lab, the writeup follows a standard structure:
 | 02 | Stored XSS into HTML context | Apprentice | [View Writeup](xss/02-stored-xss.md) |
 | 03 | DOM XSS in document.write sink | Apprentice | [View Writeup](xss/03-dom-xss.md) |
 | 04 | Reflected XSS into attribute | Practitioner | [View Writeup](xss/04-attribute-xss.md) |
+
+### DOM-based XSS
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | DOM XSS in innerHTML sink using source location.search | Apprentice | [View Writeup](dom-xss/01-dom-innerhtml.md) |
+| 02 | DOM XSS in jQuery anchor href attribute sink using location.search source | Apprentice | [View Writeup](dom-xss/02-dom-jquery.md) |
+| 03 | DOM XSS in jQuery selector sink using a hashchange event | Apprentice | [View Writeup](dom-xss/03-dom-jquery-selector.md) |
+| 04 | DOM XSS in document.write sink using source location.search inside a select element | Practitioner | [View Writeup](dom-xss/04-document-write-select.md) |
 
 ---
 

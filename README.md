@@ -15,14 +15,16 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 7:** Blind SQL Injection (Time, Boolean, Error) - *Completed (see `blind-sql-injection/` folder)*
 - [x] **Stage 8:** Cross-Site Scripting (XSS) - *Completed (see `xss/` folder)*
 - [x] **Stage 9:** DOM-based XSS - *Completed (see `dom-xss/` folder)*
-- [ ] **Stage 10+:** CSRF, SSRF, etc. - *In progress*
+- [x] **Stage 10:** Cross-Site Request Forgery (CSRF) - *Completed (see `csrf/` folder)*
+- [ ] **Stage 11+:** SSRF, XXE, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
 - **SQL Injection (SQLi):** UNION-based attacks, Authentication Bypass, Data Exfiltration.
 - **Blind SQL Injection:** Time-based, Boolean-based, and Error-based inference. Automation via Python scripts.
 - **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass, jQuery sinks.
-- *More to come: CSRF, SSRF, etc.*
+- **Cross-Site Request Forgery (CSRF):** Bypassing missing defenses, method override tricks, session token flaws, and SameSite/Referer bypasses.
+- *More to come: SSRF, XXE, etc.*
 
 ## 📂 Repository Structure
 
@@ -48,6 +50,13 @@ appsec-writeups/
 │   ├── 02-dom-jquery.md
 │   ├── 03-dom-jquery-selector.md
 │   └── 04-document-write-select.md
+├── csrf/                   # CSRF writeups
+│   ├── screenshots/
+│   ├── 01-csrf-no-defenses.md
+│   ├── 02-csrf-method-override.md
+│   ├── 03-csrf-token-session.md
+│   ├── 04-csrf-samesite-lax.md
+│   └── 05-csrf-referer-validation.md
 └── README.md
 ```
 
@@ -95,6 +104,15 @@ For each lab, the writeup follows a standard structure:
 | 02 | DOM XSS in jQuery anchor href attribute sink using location.search source | Apprentice | [View Writeup](dom-xss/02-dom-jquery.md) |
 | 03 | DOM XSS in jQuery selector sink using a hashchange event | Apprentice | [View Writeup](dom-xss/03-dom-jquery-selector.md) |
 | 04 | DOM XSS in document.write sink using source location.search inside a select element | Practitioner | [View Writeup](dom-xss/04-document-write-select.md) |
+
+### Cross-Site Request Forgery (CSRF)
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | CSRF vulnerability with no defenses | Apprentice | [View Writeup](csrf/01-csrf-no-defenses.md) |
+| 02 | CSRF where token validation depends on request method | Practitioner | [View Writeup](csrf/02-csrf-method-override.md) |
+| 03 | CSRF where token is not tied to user session | Practitioner | [View Writeup](csrf/03-csrf-token-session.md) |
+| 04 | SameSite Lax bypass via method override | Practitioner | [View Writeup](csrf/04-csrf-samesite-lax.md) |
+| 05 | CSRF where Referer validation depends on header being present | Practitioner | [View Writeup](csrf/05-csrf-referer-validation.md) |
 
 ---
 

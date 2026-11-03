@@ -15,14 +15,16 @@
 - [x] **Этап 7:** Blind SQL Injection (Time, Boolean, Error) - *Завершено (папка `blind-sql-injection/`)*
 - [x] **Этап 8:** Cross-Site Scripting (XSS) - *Завершено (папка `xss/`)*
 - [x] **Этап 9:** DOM-based XSS - *Завершено (папка `dom-xss/`)*
-- [ ] **Этап 10+:** CSRF, SSRF и др. - *В процессе*
+- [x] **Этап 10:** Cross-Site Request Forgery (CSRF) - *Завершено (папка `csrf/`)*
+- [ ] **Этап 11+:** SSRF, XXE и др. - *В процессе*
 
 ## 🛠 Продемонстрированные навыки
 
 - **SQL-инъекции (SQLi):** UNION-атаки, обход авторизации, эксфильтрация данных.
 - **Слепые SQL-инъекции (Blind SQLi):** Вывод данных на основе времени (Time-based), логики (Boolean-based) и ошибок (Error-based). Автоматизация через Python-скрипты.
 - **Cross-Site Scripting (XSS):** Отраженный, Сохраненный, DOM-based. Разрыв контекста, обход HTML-кодирования, jQuery-стоки (sinks).
-- *В планах: CSRF, SSRF и др.*
+- **Cross-Site Request Forgery (CSRF):** Обход отсутствующих защит, трюки с переопределением методов, уязвимости токенов сессий, обходы SameSite/Referer.
+- *В планах: SSRF, XXE и др.*
 
 ## 📂 Структура репозитория
 
@@ -48,6 +50,13 @@ appsec-writeups/
 │   ├── 02-dom-jquery.md
 │   ├── 03-dom-jquery-selector.md
 │   └── 04-document-write-select.md
+├── csrf/                   # Отчеты по CSRF
+│   ├── screenshots/
+│   ├── 01-csrf-no-defenses.md
+│   ├── 02-csrf-method-override.md
+│   ├── 03-csrf-token-session.md
+│   ├── 04-csrf-samesite-lax.md
+│   └── 05-csrf-referer-validation.md
 └── README.md
 ```
 
@@ -95,6 +104,15 @@ appsec-writeups/
 | 02 | DOM XSS in jQuery anchor href attribute sink using location.search source | Apprentice | [View Writeup](dom-xss/02-dom-jquery.md) |
 | 03 | DOM XSS in jQuery selector sink using a hashchange event | Apprentice | [View Writeup](dom-xss/03-dom-jquery-selector.md) |
 | 04 | DOM XSS in document.write sink using source location.search inside a select element | Practitioner | [View Writeup](dom-xss/04-document-write-select.md) |
+
+### Cross-Site Request Forgery (CSRF)
+| # | Название | Сложность | Ссылка |
+|---|----------|------------|------|
+| 01 | CSRF vulnerability with no defenses | Apprentice | [View Writeup](csrf/01-csrf-no-defenses.md) |
+| 02 | CSRF where token validation depends on request method | Practitioner | [View Writeup](csrf/02-csrf-method-override.md) |
+| 03 | CSRF where token is not tied to user session | Practitioner | [View Writeup](csrf/03-csrf-token-session.md) |
+| 04 | SameSite Lax bypass via method override | Practitioner | [View Writeup](csrf/04-csrf-samesite-lax.md) |
+| 05 | CSRF where Referer validation depends on header being present | Practitioner | [View Writeup](csrf/05-csrf-referer-validation.md) |
 
 ---
 

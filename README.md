@@ -16,7 +16,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 8:** Cross-Site Scripting (XSS) - *Completed (see `xss/` folder)*
 - [x] **Stage 9:** DOM-based XSS - *Completed (see `dom-xss/` folder)*
 - [x] **Stage 10:** Cross-Site Request Forgery (CSRF) - *Completed (see `csrf/` folder)*
-- [ ] **Stage 11+:** SSRF, XXE, etc. - *In progress*
+- [x] **Stage 11:** Server-Side Request Forgery (SSRF) - *Completed (see `ssrf/` folder)*
+- [ ] **Stage 12+:** XXE,  etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
@@ -24,7 +25,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - **Blind SQL Injection:** Time-based, Boolean-based, and Error-based inference. Automation via Python scripts.
 - **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass, jQuery sinks.
 - **Cross-Site Request Forgery (CSRF):** Bypassing missing defenses, method override tricks, session token flaws, and SameSite/Referer bypasses.
-- *More to come: SSRF, XXE, etc.*
+- **Server-Side Request Forgery (SSRF):** Scanning internal networks, bypassing blacklists and whitelists, exploiting open redirects.
+- *More to come: XXE, CSRF, etc.*
 
 ## 📂 Repository Structure
 
@@ -57,6 +59,13 @@ appsec-writeups/
 │   ├── 03-csrf-token-session.md
 │   ├── 04-csrf-samesite-lax.md
 │   └── 05-csrf-referer-validation.md
+├── ssrf/                   # SSRF writeups
+│   ├── screenshots/
+│   ├── 01-basic-ssrf-local.md
+│   ├── 02-basic-ssrf-backend.md
+│   ├── 03-ssrf-blacklist.md
+│   ├── 04-ssrf-open-redirect.md
+│   └── 05-ssrf-whitelist.md
 └── README.md
 ```
 
@@ -113,6 +122,15 @@ For each lab, the writeup follows a standard structure:
 | 03 | CSRF where token is not tied to user session | Practitioner | [View Writeup](csrf/03-csrf-token-session.md) |
 | 04 | SameSite Lax bypass via method override | Practitioner | [View Writeup](csrf/04-csrf-samesite-lax.md) |
 | 05 | CSRF where Referer validation depends on header being present | Practitioner | [View Writeup](csrf/05-csrf-referer-validation.md) |
+
+### Server-Side Request Forgery (SSRF)
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | Basic SSRF against the local server | Apprentice | [View Writeup](ssrf/01-basic-ssrf-local.md) |
+| 02 | Basic SSRF against another back-end system | Apprentice | [View Writeup](ssrf/02-basic-ssrf-backend.md) |
+| 03 | SSRF with blacklist-based input filter | Practitioner | [View Writeup](ssrf/03-ssrf-blacklist.md) |
+| 04 | SSRF with filter bypass via open redirection vulnerability | Practitioner | [View Writeup](ssrf/04-ssrf-open-redirect.md) |
+| 05 | SSRF with whitelist-based input filter | Expert | [View Writeup](ssrf/05-ssrf-whitelist.md) |
 
 ---
 

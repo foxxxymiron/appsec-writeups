@@ -16,7 +16,8 @@
 - [x] **Этап 8:** Cross-Site Scripting (XSS) - *Завершено (папка `xss/`)*
 - [x] **Этап 9:** DOM-based XSS - *Завершено (папка `dom-xss/`)*
 - [x] **Этап 10:** Cross-Site Request Forgery (CSRF) - *Завершено (папка `csrf/`)*
-- [ ] **Этап 11+:** SSRF, XXE и др. - *В процессе*
+- [x] **Этап 11:** Server-Side Request Forgery (SSRF) - *Завершено (папка `ssrf/`)*
+- [ ] **Этап 12+:** XXE, CSRF и др. - *В процессе*
 
 ## 🛠 Продемонстрированные навыки
 
@@ -24,7 +25,8 @@
 - **Слепые SQL-инъекции (Blind SQLi):** Вывод данных на основе времени (Time-based), логики (Boolean-based) и ошибок (Error-based). Автоматизация через Python-скрипты.
 - **Cross-Site Scripting (XSS):** Отраженный, Сохраненный, DOM-based. Разрыв контекста, обход HTML-кодирования, jQuery-стоки (sinks).
 - **Cross-Site Request Forgery (CSRF):** Обход отсутствующих защит, трюки с переопределением методов, уязвимости токенов сессий, обходы SameSite/Referer.
-- *В планах: SSRF, XXE и др.*
+- **Server-Side Request Forgery (SSRF):** Сканирование внутренних сетей, обход черных и белых списков, эксплуатация открытых перенаправлений.
+- *В планах: XXE, CSRF и др.*
 
 ## 📂 Структура репозитория
 
@@ -57,6 +59,13 @@ appsec-writeups/
 │   ├── 03-csrf-token-session.md
 │   ├── 04-csrf-samesite-lax.md
 │   └── 05-csrf-referer-validation.md
+├── ssrf/                   # Отчеты по SSRF
+│   ├── screenshots/
+│   ├── 01-basic-ssrf-local.md
+│   ├── 02-basic-ssrf-backend.md
+│   ├── 03-ssrf-blacklist.md
+│   ├── 04-ssrf-open-redirect.md
+│   └── 05-ssrf-whitelist.md
 └── README.md
 ```
 
@@ -113,6 +122,15 @@ appsec-writeups/
 | 03 | CSRF where token is not tied to user session | Practitioner | [View Writeup](csrf/03-csrf-token-session.md) |
 | 04 | SameSite Lax bypass via method override | Practitioner | [View Writeup](csrf/04-csrf-samesite-lax.md) |
 | 05 | CSRF where Referer validation depends on header being present | Practitioner | [View Writeup](csrf/05-csrf-referer-validation.md) |
+
+### Server-Side Request Forgery (SSRF)
+| # | Название | Сложность | Ссылка |
+|---|----------|------------|------|
+| 01 | Basic SSRF against the local server | Apprentice | [View Writeup](ssrf/01-basic-ssrf-local.md) |
+| 02 | Basic SSRF against another back-end system | Apprentice | [View Writeup](ssrf/02-basic-ssrf-backend.md) |
+| 03 | SSRF with blacklist-based input filter | Practitioner | [View Writeup](ssrf/03-ssrf-blacklist.md) |
+| 04 | SSRF with filter bypass via open redirection vulnerability | Practitioner | [View Writeup](ssrf/04-ssrf-open-redirect.md) |
+| 05 | SSRF with whitelist-based input filter | Expert | [View Writeup](ssrf/05-ssrf-whitelist.md) |
 
 ---
 

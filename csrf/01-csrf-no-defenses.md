@@ -30,10 +30,10 @@ Because the server relies solely on the session cookie to authenticate the user,
 ## Evidence
 
 ### Exploit Code
-![CSRF Exploit Code](screenshots/01-csrf-exploit-code.png)
+![CSRF Exploit Code](screenshots/01-csrf-no-def-code.png)
 
 ### Lab Solved
-![CSRF Solved](screenshots/02-csrf-solved.png)
+![CSRF Solved](screenshots/02-csrf-no-def-solved.png)
 
 ## Mitigation
 To prevent CSRF, the application must verify that the request originated from its own frontend.

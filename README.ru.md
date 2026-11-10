@@ -17,7 +17,8 @@
 - [x] **Этап 9:** DOM-based XSS - *Завершено (папка `dom-xss/`)*
 - [x] **Этап 10:** Cross-Site Request Forgery (CSRF) - *Завершено (папка `csrf/`)*
 - [x] **Этап 11:** Server-Side Request Forgery (SSRF) - *Завершено (папка `ssrf/`)*
-- [ ] **Этап 12+:** XXE, CSRF и др. - *В процессе*
+- [x] **Этап 12:** Уязвимости бизнес-логики - *Завершено (папка `blv/`)*
+- [ ] **Этап 13+:** Directory Traversal и др. - *В процессе*
 
 ## 🛠 Продемонстрированные навыки
 
@@ -26,7 +27,8 @@
 - **Cross-Site Scripting (XSS):** Отраженный, Сохраненный, DOM-based. Разрыв контекста, обход HTML-кодирования, jQuery-стоки (sinks).
 - **Cross-Site Request Forgery (CSRF):** Обход отсутствующих защит, трюки с переопределением методов, уязвимости токенов сессий, обходы SameSite/Referer.
 - **Server-Side Request Forgery (SSRF):** Сканирование внутренних сетей, обход черных и белых списков, эксплуатация открытых перенаправлений.
-- *В планах: XXE, CSRF и др.*
+- **Уязвимости бизнес-логики:** Подмена цен, отрицательные количества, обход этапов оформления заказа, бесконечные деньги.
+- *В планах: Directory Traversal и др.*
 
 ## 📂 Структура репозитория
 
@@ -66,6 +68,12 @@ appsec-writeups/
 │   ├── 03-ssrf-blacklist.md
 │   ├── 04-ssrf-open-redirect.md
 │   └── 05-ssrf-whitelist.md
+├── blv/                    # Отчеты по уязвимостям бизнес-логики
+│   ├── screenshots/
+│   ├── 01-excessive-trust.md
+│   ├── 02-high-level-logic.md
+│   ├── 03-workflow-validation.md
+│   └── 04-infinite-money.md
 └── README.md
 ```
 
@@ -131,6 +139,14 @@ appsec-writeups/
 | 03 | SSRF with blacklist-based input filter | Practitioner | [View Writeup](ssrf/03-ssrf-blacklist.md) |
 | 04 | SSRF with filter bypass via open redirection vulnerability | Practitioner | [View Writeup](ssrf/04-ssrf-open-redirect.md) |
 | 05 | SSRF with whitelist-based input filter | Expert | [View Writeup](ssrf/05-ssrf-whitelist.md) |
+
+### Уязвимости бизнес-логики (Business Logic)
+| # | Название | Сложность | Ссылка |
+|---|----------|------------|------|
+| 01 | Excessive trust in client-side controls | Apprentice | [View Writeup](blv/01-excessive-trust.md) |
+| 02 | High-level logic vulnerability | Apprentice | [View Writeup](blv/02-high-level-logic.md) |
+| 03 | Insufficient workflow validation | Practitioner | [View Writeup](blv/03-workflow-validation.md) |
+| 04 | Infinite money logic flaw | Practitioner | [View Writeup](blv/04-infinite-money.md) |
 
 ---
 

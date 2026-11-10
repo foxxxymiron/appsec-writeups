@@ -17,7 +17,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 9:** DOM-based XSS - *Completed (see `dom-xss/` folder)*
 - [x] **Stage 10:** Cross-Site Request Forgery (CSRF) - *Completed (see `csrf/` folder)*
 - [x] **Stage 11:** Server-Side Request Forgery (SSRF) - *Completed (see `ssrf/` folder)*
-- [ ] **Stage 12+:** XXE,  etc. - *In progress*
+- [x] **Stage 12:** Business Logic Vulnerabilities - *Completed (see `blv/` folder)*
+- [ ] **Stage 13+:** Directory Traversal, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
@@ -26,7 +27,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - **Cross-Site Scripting (XSS):** Reflected, Stored, and DOM-based. Context breaking, HTML encoding bypass, jQuery sinks.
 - **Cross-Site Request Forgery (CSRF):** Bypassing missing defenses, method override tricks, session token flaws, and SameSite/Referer bypasses.
 - **Server-Side Request Forgery (SSRF):** Scanning internal networks, bypassing blacklists and whitelists, exploiting open redirects.
-- *More to come: XXE, CSRF, etc.*
+- **Business Logic Vulnerabilities:** Price tampering, negative quantities, workflow bypass, and infinite money logic flaws.
+- *More to come: Directory Traversal, etc.*
 
 ## 📂 Repository Structure
 
@@ -66,6 +68,12 @@ appsec-writeups/
 │   ├── 03-ssrf-blacklist.md
 │   ├── 04-ssrf-open-redirect.md
 │   └── 05-ssrf-whitelist.md
+├── blv/                    # Business Logic Vulnerabilities
+│   ├── screenshots/
+│   ├── 01-excessive-trust.md
+│   ├── 02-high-level-logic.md
+│   ├── 03-workflow-validation.md
+│   └── 04-infinite-money.md
 └── README.md
 ```
 
@@ -131,6 +139,14 @@ For each lab, the writeup follows a standard structure:
 | 03 | SSRF with blacklist-based input filter | Practitioner | [View Writeup](ssrf/03-ssrf-blacklist.md) |
 | 04 | SSRF with filter bypass via open redirection vulnerability | Practitioner | [View Writeup](ssrf/04-ssrf-open-redirect.md) |
 | 05 | SSRF with whitelist-based input filter | Expert | [View Writeup](ssrf/05-ssrf-whitelist.md) |
+
+### Business Logic Vulnerabilities
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | Excessive trust in client-side controls | Apprentice | [View Writeup](blv/01-excessive-trust.md) |
+| 02 | High-level logic vulnerability | Apprentice | [View Writeup](blv/02-high-level-logic.md) |
+| 03 | Insufficient workflow validation | Practitioner | [View Writeup](blv/03-workflow-validation.md) |
+| 04 | Infinite money logic flaw | Practitioner | [View Writeup](blv/04-infinite-money.md) |
 
 ---
 

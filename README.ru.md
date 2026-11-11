@@ -18,7 +18,8 @@
 - [x] **Этап 10:** Cross-Site Request Forgery (CSRF) - *Завершено (папка `csrf/`)*
 - [x] **Этап 11:** Server-Side Request Forgery (SSRF) - *Завершено (папка `ssrf/`)*
 - [x] **Этап 12:** Уязвимости бизнес-логики - *Завершено (папка `blv/`)*
-- [ ] **Этап 13+:** Directory Traversal и др. - *В процессе*
+- [x] **Этап 13:** Path Traversal - *Завершено (папка `dt/`)*
+- [ ] **Этап 14+:** File Inclusion и др. - *В процессе*
 
 ## 🛠 Продемонстрированные навыки
 
@@ -28,7 +29,8 @@
 - **Cross-Site Request Forgery (CSRF):** Обход отсутствующих защит, трюки с переопределением методов, уязвимости токенов сессий, обходы SameSite/Referer.
 - **Server-Side Request Forgery (SSRF):** Сканирование внутренних сетей, обход черных и белых списков, эксплуатация открытых перенаправлений.
 - **Уязвимости бизнес-логики:** Подмена цен, отрицательные количества, обход этапов оформления заказа, бесконечные деньги.
-- *В планах: Directory Traversal и др.*
+- **Path Traversal:** Обход фильтров через абсолютные пути, нерекурсивное удаление, URL-кодирование, проверка префикса и нулевые байты.
+- *В планах: File Inclusion и др.*
 
 ## 📂 Структура репозитория
 
@@ -74,6 +76,14 @@ appsec-writeups/
 │   ├── 02-high-level-logic.md
 │   ├── 03-workflow-validation.md
 │   └── 04-infinite-money.md
+├── dt/                     # Отчеты по Path Traversal
+│   ├── screenshots/
+│   ├── 01-simple-case.md
+│   ├── 02-absolute-path.md
+│   ├── 03-prefix-validation.md
+│   ├── 04-non-recursive.md
+│   ├── 05-url-decode.md
+│   └── 06-null-byte.md
 └── README.md
 ```
 
@@ -147,6 +157,16 @@ appsec-writeups/
 | 02 | High-level logic vulnerability | Apprentice | [View Writeup](blv/02-high-level-logic.md) |
 | 03 | Insufficient workflow validation | Practitioner | [View Writeup](blv/03-workflow-validation.md) |
 | 04 | Infinite money logic flaw | Practitioner | [View Writeup](blv/04-infinite-money.md) |
+
+### Path Traversal
+| # | Название | Сложность | Ссылка |
+|---|----------|------------|------|
+| 01 | File path traversal, simple case | Apprentice | [View Writeup](dt/01-simple-case.md) |
+| 02 | File path traversal, traversal sequences blocked with absolute path bypass | Practitioner | [View Writeup](dt/02-absolute-path.md) |
+| 03 | File path traversal, validation of start of path | Practitioner | [View Writeup](dt/03-prefix-validation.md) |
+| 04 | File path traversal, traversal sequences stripped non-recursively | Practitioner | [View Writeup](dt/04-non-recursive.md) |
+| 05 | File path traversal, traversal sequences stripped with superfluous URL-decode | Practitioner | [View Writeup](dt/05-url-decode.md) |
+| 06 | File path traversal, validation of file extension with null byte bypass | Practitioner | [View Writeup](dt/06-null-byte.md) |
 
 ---
 

@@ -18,7 +18,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 10:** Cross-Site Request Forgery (CSRF) - *Completed (see `csrf/` folder)*
 - [x] **Stage 11:** Server-Side Request Forgery (SSRF) - *Completed (see `ssrf/` folder)*
 - [x] **Stage 12:** Business Logic Vulnerabilities - *Completed (see `blv/` folder)*
-- [ ] **Stage 13+:** Directory Traversal, etc. - *In progress*
+- [x] **Stage 13:** Path Traversal - *Completed (see `dt/` folder)*
+- [ ] **Stage 14+:** File Inclusion, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
@@ -28,7 +29,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - **Cross-Site Request Forgery (CSRF):** Bypassing missing defenses, method override tricks, session token flaws, and SameSite/Referer bypasses.
 - **Server-Side Request Forgery (SSRF):** Scanning internal networks, bypassing blacklists and whitelists, exploiting open redirects.
 - **Business Logic Vulnerabilities:** Price tampering, negative quantities, workflow bypass, and infinite money logic flaws.
-- *More to come: Directory Traversal, etc.*
+- **Path Traversal:** Bypassing filters via absolute paths, non-recursive stripping, URL encoding, prefix validation, and null bytes.
+- *More to come: File Inclusion, etc.*
 
 ## 📂 Repository Structure
 
@@ -74,6 +76,14 @@ appsec-writeups/
 │   ├── 02-high-level-logic.md
 │   ├── 03-workflow-validation.md
 │   └── 04-infinite-money.md
+├── dt/                     # Path Traversal writeups
+│   ├── screenshots/
+│   ├── 01-simple-case.md
+│   ├── 02-absolute-path.md
+│   ├── 03-prefix-validation.md
+│   ├── 04-non-recursive.md
+│   ├── 05-url-decode.md
+│   └── 06-null-byte.md
 └── README.md
 ```
 
@@ -147,6 +157,16 @@ For each lab, the writeup follows a standard structure:
 | 02 | High-level logic vulnerability | Apprentice | [View Writeup](blv/02-high-level-logic.md) |
 | 03 | Insufficient workflow validation | Practitioner | [View Writeup](blv/03-workflow-validation.md) |
 | 04 | Infinite money logic flaw | Practitioner | [View Writeup](blv/04-infinite-money.md) |
+
+### Path Traversal
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | File path traversal, simple case | Apprentice | [View Writeup](dt/01-simple-case.md) |
+| 02 | File path traversal, traversal sequences blocked with absolute path bypass | Practitioner | [View Writeup](dt/02-absolute-path.md) |
+| 03 | File path traversal, validation of start of path | Practitioner | [View Writeup](dt/03-prefix-validation.md) |
+| 04 | File path traversal, traversal sequences stripped non-recursively | Practitioner | [View Writeup](dt/04-non-recursive.md) |
+| 05 | File path traversal, traversal sequences stripped with superfluous URL-decode | Practitioner | [View Writeup](dt/05-url-decode.md) |
+| 06 | File path traversal, validation of file extension with null byte bypass | Practitioner | [View Writeup](dt/06-null-byte.md) |
 
 ---
 

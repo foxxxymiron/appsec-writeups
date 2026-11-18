@@ -2,7 +2,7 @@
 
 [Русская версия](README.ru.md)
 
-This repository contains my practical writeups and solutions for web security labs, primarily from **PortSwigger Web Security Academy**. 
+This repository contains my practical writeups and solutions for web security labs, primarily from **PortSwigger Web Security Academy** and **Root-Me**. 
 
 It is part of my self-paced AppSec learning roadmap. The goal of this repository is to document my progress, demonstrate hands-on skills in identifying and exploiting web vulnerabilities, and serve as a personal knowledge base.
 
@@ -19,7 +19,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 11:** Server-Side Request Forgery (SSRF) - *Completed (see `ssrf/` folder)*
 - [x] **Stage 12:** Business Logic Vulnerabilities - *Completed (see `blv/` folder)*
 - [x] **Stage 13:** Path Traversal - *Completed (see `dt/` folder)*
-- [ ] **Stage 14+:** File Inclusion, etc. - *In progress*
+- [x] **Stage 14:** File Inclusion (LFI) - *Completed (see `lfi/` folder)*
+- [ ] **Stage 15+:** RFI, XXE, Deserialization, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
@@ -30,11 +31,11 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - **Server-Side Request Forgery (SSRF):** Scanning internal networks, bypassing blacklists and whitelists, exploiting open redirects.
 - **Business Logic Vulnerabilities:** Price tampering, negative quantities, workflow bypass, and infinite money logic flaws.
 - **Path Traversal:** Bypassing filters via absolute paths, non-recursive stripping, URL encoding, prefix validation, and null bytes.
-- *More to come: File Inclusion, etc.*
+- **Local File Inclusion (LFI):** Bypassing `open_basedir` restrictions, double URL encoding to defeat traversal filters, PHP stream wrappers (`zip://`, `php://`, `data://`) to read arbitrary files and execute arbitrary code through file upload + inclusion chains.
+- *More to come: Remote File Inclusion (RFI), XXE, Deserialization, etc.*
 
 ## 📂 Repository Structure
 
-```text
 appsec-writeups/
 ├── sql-injection/          # In-band SQLi writeups
 │   ├── screenshots/
@@ -84,8 +85,15 @@ appsec-writeups/
 │   ├── 04-non-recursive.md
 │   ├── 05-url-decode.md
 │   └── 06-null-byte.md
+├── lfi/                    # Local File Inclusion writeups (Root-Me)
+│   ├── screenshots/
+│   ├── 01-lfi.md
+│   ├── 01-lfi.ru.md
+│   ├── 02-lfi-double-encoding.md
+│   ├── 02-lfi-double-encoding.ru.md
+│   ├── 03-lfi-wrappers.md
+│   └── 03-lfi-wrappers.ru.md
 └── README.md
-```
 
 ## 📝 Methodology
 
@@ -168,6 +176,13 @@ For each lab, the writeup follows a standard structure:
 | 05 | File path traversal, traversal sequences stripped with superfluous URL-decode | Practitioner | [View Writeup](dt/05-url-decode.md) |
 | 06 | File path traversal, validation of file extension with null byte bypass | Practitioner | [View Writeup](dt/06-null-byte.md) |
 
+### Local File Inclusion (LFI) — Root-Me
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | Local File Inclusion (open_basedir bypass) | 30 pts | [View Writeup](lfi/01-lfi.md) |
+| 02 | Local File Inclusion - Double Encoding | 30 pts | [View Writeup](lfi/02-lfi-double-encoding.md) |
+| 03 | Local File Inclusion - Wrappers (zip://) | 40 pts | [View Writeup](lfi/03-lfi-wrappers.md) |
+
 ---
 
-*Disclaimer: All attacks were performed on legal, intentionally vulnerable environments provided by PortSwigger Web Security Academy. This knowledge is intended for educational and defensive purposes only.*
+*Disclaimer: All attacks were performed on legal, intentionally vulnerable environments provided by PortSwigger Web Security Academy and Root-Me. This knowledge is intended for educational and defensive purposes only.*

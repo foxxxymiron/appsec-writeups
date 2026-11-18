@@ -1,50 +1,51 @@
-# AppSec Writeups & Labs
+# Практические отчеты и решения по AppSec
 
 [English version](README.md)
 
-Этот репозиторий содержит мои практические отчеты (writeups) и решения для лабораторий по веб-безопасности, в основном с **PortSwigger Web Security Academy**. 
+Этот репозиторий содержит мои практические отчеты (writeups) и решения для лабораторных работ по веб-безопасности, в основном с платформ **PortSwigger Web Security Academy** и **Root-Me**. 
 
-Это часть моего самостоятельного учебного плана по AppSec. Цель репозитория — документировать прогресс, демонстрировать практические навыки поиска и эксплуатации уязвимостей, а также служить личной базой знаний.
+Это часть моего индивидуального плана обучения AppSec. Цель этого репозитория — документировать мой прогресс, демонстрировать практические навыки выявления и эксплуатации веб-уязвимостей, а также служить личной базой знаний.
 
-## 🎯 Прогресс по роудмапу
+## 🎯 Прогресс по этапам
 
-- [x] **Этап 3:** Клиентская часть (HTML + CSS + JS) - *Завершено (репозиторий `appsec-messenger`)*
-- [x] **Этап 4:** Flask Backend & Auth - *Завершено (репозиторий `appsec-messenger-flask`)*
-- [x] **Этап 5:** SQLite Database & CRUD - *Завершено (репозиторий `appsec-messenger-flask`)*
-- [x] **Этап 6:** SQL Injection (In-band / UNION) - *Завершено (папка `sql-injection/`)*
-- [x] **Этап 7:** Blind SQL Injection (Time, Boolean, Error) - *Завершено (папка `blind-sql-injection/`)*
-- [x] **Этап 8:** Cross-Site Scripting (XSS) - *Завершено (папка `xss/`)*
-- [x] **Этап 9:** DOM-based XSS - *Завершено (папка `dom-xss/`)*
-- [x] **Этап 10:** Cross-Site Request Forgery (CSRF) - *Завершено (папка `csrf/`)*
-- [x] **Этап 11:** Server-Side Request Forgery (SSRF) - *Завершено (папка `ssrf/`)*
-- [x] **Этап 12:** Уязвимости бизнес-логики - *Завершено (папка `blv/`)*
-- [x] **Этап 13:** Path Traversal - *Завершено (папка `dt/`)*
-- [ ] **Этап 14+:** File Inclusion и др. - *В процессе*
+- [x] **Этап 3:** Клиентская часть (HTML + CSS + JS) - *Завершено в репозитории `appsec-messenger`*
+- [x] **Этап 4:** Бэкенд на Flask и аутентификация - *Завершено в репозитории `appsec-messenger-flask`*
+- [x] **Этап 5:** База данных SQLite и CRUD - *Завершено в репозитории `appsec-messenger-flask`*
+- [x] **Этап 6:** SQL-инъекции (In-band / UNION) - *Завершено (см. папку `sql-injection/`)*
+- [x] **Этап 7:** Слепые SQL-инъекции (Time, Boolean, Error) - *Завершено (см. папку `blind-sql-injection/`)*
+- [x] **Этап 8:** Межсайтовый скриптинг (XSS) - *Завершено (см. папку `xss/`)*
+- [x] **Этап 9:** DOM-based XSS - *Завершено (см. папку `dom-xss/`)*
+- [x] **Этап 10:** Межсайтовая подделка запроса (CSRF) - *Завершено (см. папку `csrf/`)*
+- [x] **Этап 11:** Подделка запроса на стороне сервера (SSRF) - *Завершено (см. папку `ssrf/`)*
+- [x] **Этап 12:** Уязвимости бизнес-логики - *Завершено (см. папку `blv/`)*
+- [x] **Этап 13:** Обход путей (Path Traversal) - *Завершено (см. папку `dt/`)*
+- [x] **Этап 14:** Включение файлов (LFI) - *Завершено (см. папку `lfi/`)*
+- [ ] **Этап 15+:** RFI, XXE, Десериализация и др. - *В процессе*
 
-## 🛠 Продемонстрированные навыки
+## 🛠 Демонстрируемые навыки
 
-- **SQL-инъекции (SQLi):** UNION-атаки, обход авторизации, эксфильтрация данных.
-- **Слепые SQL-инъекции (Blind SQLi):** Вывод данных на основе времени (Time-based), логики (Boolean-based) и ошибок (Error-based). Автоматизация через Python-скрипты.
-- **Cross-Site Scripting (XSS):** Отраженный, Сохраненный, DOM-based. Разрыв контекста, обход HTML-кодирования, jQuery-стоки (sinks).
-- **Cross-Site Request Forgery (CSRF):** Обход отсутствующих защит, трюки с переопределением методов, уязвимости токенов сессий, обходы SameSite/Referer.
-- **Server-Side Request Forgery (SSRF):** Сканирование внутренних сетей, обход черных и белых списков, эксплуатация открытых перенаправлений.
-- **Уязвимости бизнес-логики:** Подмена цен, отрицательные количества, обход этапов оформления заказа, бесконечные деньги.
-- **Path Traversal:** Обход фильтров через абсолютные пути, нерекурсивное удаление, URL-кодирование, проверка префикса и нулевые байты.
-- *В планах: File Inclusion и др.*
+- **SQL-инъекции (SQLi):** Атаки на основе UNION, обход аутентификации, эксфильтрация данных.
+- **Слепые SQL-инъекции:** Логический вывод на основе времени, булевых значений и ошибок. Автоматизация с помощью Python-скриптов.
+- **Межсайтовый скриптинг (XSS):** Отраженный, хранимый и DOM-based. Разрыв контекста, обход HTML-кодирования, использование jQuery-синков.
+- **Межсайтовая подделка запроса (CSRF):** Обход отсутствующих защит, трюки с переопределением метода, flaws токенов сессии, обход SameSite/Referer.
+- **Подделка запроса на стороне сервера (SSRF):** Сканирование внутренних сетей, обход черных и белых списков, эксплуатация открытых редиректов.
+- **Уязвимости бизнес-логики:** Подмена цен, отрицательные количества, обход рабочих процессов и логические ошибки "бесконечных денег".
+- **Обход путей (Path Traversal):** Обход фильтров через абсолютные пути, нерекурсивное удаление последовательностей, URL-кодирование, проверка префиксов и нулевые байты.
+- **Локальное включение файлов (LFI):** Обход ограничений `open_basedir`, двойное URL-кодирование для победы над фильтрами обхода путей, использование PHP-обёрток потоков (`zip://`, `php://`, `data://`) для чтения произвольных файлов и выполнения кода через цепочки загрузки и включения файлов.
+- *В планах: Удаленное включение файлов (RFI), XXE, Десериализация и др.*
 
 ## 📂 Структура репозитория
 
-```text
 appsec-writeups/
 ├── sql-injection/          # Отчеты по In-band SQLi
 │   ├── screenshots/
 │   └── 01-where-clause.md ...
-├── blind-sql-injection/    # Отчеты по слепым SQLi (Inferential)
+├── blind-sql-injection/    # Отчеты по слепым (Inferential) SQLi
 │   ├── screenshots/
 │   ├── scripts/            # Скрипты для автоматизации эксплуатации
 │   ├── 01-blind-time-retrieval.md
 │   └── ...
-├── xss/                    # Отчеты по Cross-Site Scripting (Reflected / Stored)
+├── xss/                    # Отчеты по XSS (Reflected / Stored)
 │   ├── screenshots/
 │   ├── 01-reflected-xss.md
 │   ├── 02-stored-xss.md
@@ -70,13 +71,13 @@ appsec-writeups/
 │   ├── 03-ssrf-blacklist.md
 │   ├── 04-ssrf-open-redirect.md
 │   └── 05-ssrf-whitelist.md
-├── blv/                    # Отчеты по уязвимостям бизнес-логики
+├── blv/                    # Уязвимости бизнес-логики
 │   ├── screenshots/
 │   ├── 01-excessive-trust.md
 │   ├── 02-high-level-logic.md
 │   ├── 03-workflow-validation.md
 │   └── 04-infinite-money.md
-├── dt/                     # Отчеты по Path Traversal
+├── dt/                     # Отчеты по обходу путей (Path Traversal)
 │   ├── screenshots/
 │   ├── 01-simple-case.md
 │   ├── 02-absolute-path.md
@@ -84,90 +85,104 @@ appsec-writeups/
 │   ├── 04-non-recursive.md
 │   ├── 05-url-decode.md
 │   └── 06-null-byte.md
+├── lfi/                    # Отчеты по локальному включению файлов (Root-Me)
+│   ├── screenshots/
+│   ├── 01-lfi.md
+│   ├── 01-lfi.ru.md
+│   ├── 02-lfi-double-encoding.md
+│   ├── 02-lfi-double-encoding.ru.md
+│   ├── 03-lfi-wrappers.md
+│   └── 03-lfi-wrappers.ru.md
 └── README.md
-```
 
 ## 📝 Методология
 
-Для каждой лаборатории отчет имеет стандартную структуру:
-1. **Анализ уязвимости:** Понимание корневой причины и уязвимого кода.
-2. **Шаги эксплуатации:** Точные пейлоады и логика их работы.
-3. **Доказательства (PoC):** Скриншоты, демонстрирующие успешную атаку.
-4. **Меры защиты (Mitigation):** Как уязвимость должна быть исправлена в исходном коде.
+Для каждой лабораторной работы отчет следует стандартной структуре:
+1. **Анализ уязвимости:** Понимание первопричины и внутреннего запроса бэкенда.
+2. **Шаги эксплуатации:** Точные полезные нагрузки (payloads) и логика, стоящая за ними.
+3. **Доказательства:** Скриншоты Proof-of-Concept (PoC), демонстрирующие успешную атаку.
+4. **Меры защиты:** Как уязвимость должна быть исправлена в исходном коде.
 
-## 📚 Индекс лабораторий
+## 📚 Индекс лабораторных работ
 
 ### SQL-инъекции (In-band)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | SQL injection in WHERE clause (Hidden Data) | Apprentice | [View Writeup](sql-injection/01-where-clause.md) |
-| 02 | Login Bypass | Apprentice | [View Writeup](sql-injection/02-login-bypass.md) |
-| 03 | Determining the number of columns | Practitioner | [View Writeup](sql-injection/03-union-columns.md) |
-| 04 | Finding a column containing text | Practitioner | [View Writeup](sql-injection/04-union-find-text.md) |
-| 05 | Retrieving data from other tables | Practitioner | [View Writeup](sql-injection/05-union-retrieve-data.md) |
-| 06 | Retrieving multiple values in a single column | Practitioner | [View Writeup](sql-injection/06-union-single-column.md) |
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | SQL-инъекция в условии WHERE (Скрытые данные) | Apprentice | [Смотреть отчет](sql-injection/01-where-clause.md) |
+| 02 | Обход аутентификации (Login Bypass) | Apprentice | [Смотреть отчет](sql-injection/02-login-bypass.md) |
+| 03 | Определение количества столбцов | Practitioner | [Смотреть отчет](sql-injection/03-union-columns.md) |
+| 04 | Поиск столбца, содержащего текст | Practitioner | [Смотреть отчет](sql-injection/04-union-find-text.md) |
+| 05 | Извлечение данных из других таблиц | Practitioner | [Смотреть отчет](sql-injection/05-union-retrieve-data.md) |
+| 06 | Извлечение нескольких значений в одном столбце | Practitioner | [Смотреть отчет](sql-injection/06-union-single-column.md) |
 
 ### Слепые SQL-инъекции (Inferential)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | Time delays and information retrieval | Practitioner | [View Writeup](blind-sql-injection/01-blind-time-retrieval.md) |
-| 02 | Conditional responses (Boolean-based) | Practitioner | [View Writeup](blind-sql-injection/02-blind-boolean.md) |
-| 03 | Conditional errors (Error-based) | Practitioner | [View Writeup](blind-sql-injection/03-blind-error.md) |
-| 04 | Full Database Dump (Automation) | Custom | [View Writeup](blind-sql-injection/04-full-db-dump.md) |
-| 05 | Protection Methods Comparison | Theory | [View Writeup](blind-sql-injection/05-protection-methods.md) |
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Задержки времени и извлечение информации | Practitioner | [Смотреть отчет](blind-sql-injection/01-blind-time-retrieval.md) |
+| 02 | Условные ответы (на основе булевых значений) | Practitioner | [Смотреть отчет](blind-sql-injection/02-blind-boolean.md) |
+| 03 | Условные ошибки (на основе ошибок) | Practitioner | [Смотреть отчет](blind-sql-injection/03-blind-error.md) |
+| 04 | Полный дамп базы данных (Автоматизация) | Custom | [Смотреть отчет](blind-sql-injection/04-full-db-dump.md) |
+| 05 | Сравнение методов защиты | Theory | [Смотреть отчет](blind-sql-injection/05-protection-methods.md) |
 
-### Cross-Site Scripting (XSS)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | Reflected XSS into HTML context | Apprentice | [View Writeup](xss/01-reflected-xss.md) |
-| 02 | Stored XSS into HTML context | Apprentice | [View Writeup](xss/02-stored-xss.md) |
-| 03 | DOM XSS in document.write sink | Apprentice | [View Writeup](xss/03-dom-xss.md) |
-| 04 | Reflected XSS into attribute | Practitioner | [View Writeup](xss/04-attribute-xss.md) |
+### Межсайтовый скриптинг (XSS)
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Отраженный XSS в HTML-контексте | Apprentice | [Смотреть отчет](xss/01-reflected-xss.md) |
+| 02 | Хранимый XSS в HTML-контексте | Apprentice | [Смотреть отчет](xss/02-stored-xss.md) |
+| 03 | DOM XSS в sink document.write | Apprentice | [Смотреть отчет](xss/03-dom-xss.md) |
+| 04 | Отраженный XSS в атрибуте | Practitioner | [Смотреть отчет](xss/04-attribute-xss.md) |
 
 ### DOM-based XSS
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | DOM XSS in innerHTML sink using source location.search | Apprentice | [View Writeup](dom-xss/01-dom-innerhtml.md) |
-| 02 | DOM XSS in jQuery anchor href attribute sink using location.search source | Apprentice | [View Writeup](dom-xss/02-dom-jquery.md) |
-| 03 | DOM XSS in jQuery selector sink using a hashchange event | Apprentice | [View Writeup](dom-xss/03-dom-jquery-selector.md) |
-| 04 | DOM XSS in document.write sink using source location.search inside a select element | Practitioner | [View Writeup](dom-xss/04-document-write-select.md) |
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | DOM XSS в sink innerHTML с использованием источника location.search | Apprentice | [Смотреть отчет](dom-xss/01-dom-innerhtml.md) |
+| 02 | DOM XSS в sink атрибута href jQuery с использованием источника location.search | Apprentice | [Смотреть отчет](dom-xss/02-dom-jquery.md) |
+| 03 | DOM XSS в sink селектора jQuery с использованием события hashchange | Apprentice | [Смотреть отчет](dom-xss/03-dom-jquery-selector.md) |
+| 04 | DOM XSS в sink document.write с использованием источника location.search внутри элемента select | Practitioner | [Смотреть отчет](dom-xss/04-document-write-select.md) |
 
-### Cross-Site Request Forgery (CSRF)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | CSRF vulnerability with no defenses | Apprentice | [View Writeup](csrf/01-csrf-no-defenses.md) |
-| 02 | CSRF where token validation depends on request method | Practitioner | [View Writeup](csrf/02-csrf-method-override.md) |
-| 03 | CSRF where token is not tied to user session | Practitioner | [View Writeup](csrf/03-csrf-token-session.md) |
-| 04 | SameSite Lax bypass via method override | Practitioner | [View Writeup](csrf/04-csrf-samesite-lax.md) |
-| 05 | CSRF where Referer validation depends on header being present | Practitioner | [View Writeup](csrf/05-csrf-referer-validation.md) |
+### Межсайтовая подделка запроса (CSRF)
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Уязвимость CSRF без средств защиты | Apprentice | [Смотреть отчет](csrf/01-csrf-no-defenses.md) |
+| 02 | CSRF, где проверка токена зависит от метода запроса | Practitioner | [Смотреть отчет](csrf/02-csrf-method-override.md) |
+| 03 | CSRF, где токен не привязан к сессии пользователя | Practitioner | [Смотреть отчет](csrf/03-csrf-token-session.md) |
+| 04 | Обход SameSite Lax через переопределение метода | Practitioner | [Смотреть отчет](csrf/04-csrf-samesite-lax.md) |
+| 05 | CSRF, где проверка Referer зависит от наличия заголовка | Practitioner | [Смотреть отчет](csrf/05-csrf-referer-validation.md) |
 
-### Server-Side Request Forgery (SSRF)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | Basic SSRF against the local server | Apprentice | [View Writeup](ssrf/01-basic-ssrf-local.md) |
-| 02 | Basic SSRF against another back-end system | Apprentice | [View Writeup](ssrf/02-basic-ssrf-backend.md) |
-| 03 | SSRF with blacklist-based input filter | Practitioner | [View Writeup](ssrf/03-ssrf-blacklist.md) |
-| 04 | SSRF with filter bypass via open redirection vulnerability | Practitioner | [View Writeup](ssrf/04-ssrf-open-redirect.md) |
-| 05 | SSRF with whitelist-based input filter | Expert | [View Writeup](ssrf/05-ssrf-whitelist.md) |
+### Подделка запроса на стороне сервера (SSRF)
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Базовый SSRF против локального сервера | Apprentice | [Смотреть отчет](ssrf/01-basic-ssrf-local.md) |
+| 02 | Базовый SSRF против другой внутренней системы | Apprentice | [Смотреть отчет](ssrf/02-basic-ssrf-backend.md) |
+| 03 | SSRF с фильтром ввода на основе черного списка | Practitioner | [Смотреть отчет](ssrf/03-ssrf-blacklist.md) |
+| 04 | SSRF с обходом фильтра через уязвимость открытого редиректа | Practitioner | [Смотреть отчет](ssrf/04-ssrf-open-redirect.md) |
+| 05 | SSRF с фильтром ввода на основе белого списка | Expert | [Смотреть отчет](ssrf/05-ssrf-whitelist.md) |
 
-### Уязвимости бизнес-логики (Business Logic)
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | Excessive trust in client-side controls | Apprentice | [View Writeup](blv/01-excessive-trust.md) |
-| 02 | High-level logic vulnerability | Apprentice | [View Writeup](blv/02-high-level-logic.md) |
-| 03 | Insufficient workflow validation | Practitioner | [View Writeup](blv/03-workflow-validation.md) |
-| 04 | Infinite money logic flaw | Practitioner | [View Writeup](blv/04-infinite-money.md) |
+### Уязвимости бизнес-логики
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Чрезмерное доверие к клиентским элементам управления | Apprentice | [Смотреть отчет](blv/01-excessive-trust.md) |
+| 02 | Уязвимость высокоуровневой логики | Apprentice | [Смотреть отчет](blv/02-high-level-logic.md) |
+| 03 | Недостаточная проверка рабочего процесса | Practitioner | [Смотреть отчет](blv/03-workflow-validation.md) |
+| 04 | Логическая ошибка "бесконечных денег" | Practitioner | [Смотреть отчет](blv/04-infinite-money.md) |
 
-### Path Traversal
-| # | Название | Сложность | Ссылка |
-|---|----------|------------|------|
-| 01 | File path traversal, simple case | Apprentice | [View Writeup](dt/01-simple-case.md) |
-| 02 | File path traversal, traversal sequences blocked with absolute path bypass | Practitioner | [View Writeup](dt/02-absolute-path.md) |
-| 03 | File path traversal, validation of start of path | Practitioner | [View Writeup](dt/03-prefix-validation.md) |
-| 04 | File path traversal, traversal sequences stripped non-recursively | Practitioner | [View Writeup](dt/04-non-recursive.md) |
-| 05 | File path traversal, traversal sequences stripped with superfluous URL-decode | Practitioner | [View Writeup](dt/05-url-decode.md) |
-| 06 | File path traversal, validation of file extension with null byte bypass | Practitioner | [View Writeup](dt/06-null-byte.md) |
+### Обход путей (Path Traversal)
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Обход пути к файлу, простой случай | Apprentice | [Смотреть отчет](dt/01-simple-case.md) |
+| 02 | Обход пути к файлу, блокировка последовательностей с обходом через абсолютный путь | Practitioner | [Смотреть отчет](dt/02-absolute-path.md) |
+| 03 | Обход пути к файлу, проверка начала пути | Practitioner | [Смотреть отчет](dt/03-prefix-validation.md) |
+| 04 | Обход пути к файлу, нерекурсивное удаление последовательностей обхода | Practitioner | [Смотреть отчет](dt/04-non-recursive.md) |
+| 05 | Обход пути к файлу, удаление последовательностей с избыточным URL-декодированием | Practitioner | [Смотреть отчет](dt/05-url-decode.md) |
+| 06 | Обход пути к файлу, проверка расширения файла с обходом через нулевой байт | Practitioner | [Смотреть отчет](dt/06-null-byte.md) |
+
+### Локальное включение файлов (LFI) — Root-Me
+| # | Название лабораторной работы | Сложность | Ссылка |
+|---|------------------------------|-----------|--------|
+| 01 | Local File Inclusion (обход open_basedir) | 30 баллов | [Смотреть отчет](lfi/01-lfi.ru.md) |
+| 02 | Local File Inclusion - Двойное кодирование | 30 баллов | [Смотреть отчет](lfi/02-lfi-double-encoding.ru.md) |
+| 03 | Local File Inclusion - Обёртки (zip://) | 40 баллов | [Смотреть отчет](lfi/03-lfi-wrappers.ru.md) |
 
 ---
 
-*Отказ от ответственности: Все атаки проводились на легальных, намеренно уязвимых средах, предоставленных PortSwigger Web Security Academy. Эти знания предназначены исключительно для образовательных и защитных целей.*
+*Отказ от ответственности: Все атаки выполнялись в легальных, преднамеренно уязвимых средах, предоставленных PortSwigger Web Security Academy и Root-Me. Эти знания предназначены исключительно для образовательных и защитных целей.*

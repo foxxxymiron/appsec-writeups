@@ -2,7 +2,7 @@
 
 [English version](README.md)
 
-Этот репозиторий содержит мои практические отчеты (writeups) и решения для лабораторных работ по веб-безопасности, в основном с платформ **PortSwigger Web Security Academy** и **Root-Me**. 
+Этот репозиторий содержит мои практические отчеты (writeups) и решения для лабораторных работ по веб-безопасности, в основном с платформ **PortSwigger Web Security Academy** и **Root-Me**.
 
 Это часть моего индивидуального плана обучения AppSec. Цель этого репозитория — документировать мой прогресс, демонстрировать практические навыки выявления и эксплуатации веб-уязвимостей, а также служить личной базой знаний.
 
@@ -36,48 +36,49 @@
 
 ## 📂 Структура репозитория
 
+```text
 appsec-writeups/
-├── sql-injection/          # Отчеты по In-band SQLi
+├── sql-injection/            # Отчеты по In-band SQLi
 │   ├── screenshots/
 │   └── 01-where-clause.md ...
-├── blind-sql-injection/    # Отчеты по слепым (Inferential) SQLi
+├── blind-sql-injection/      # Отчеты по слепым (Inferential) SQLi
 │   ├── screenshots/
-│   ├── scripts/            # Скрипты для автоматизации эксплуатации
+│   ├── scripts/              # Скрипты для автоматизации эксплуатации
 │   ├── 01-blind-time-retrieval.md
 │   └── ...
-├── xss/                    # Отчеты по XSS (Reflected / Stored)
+├── xss/                      # Отчеты по XSS (Reflected / Stored)
 │   ├── screenshots/
 │   ├── 01-reflected-xss.md
 │   ├── 02-stored-xss.md
 │   ├── 03-dom-xss.md
 │   └── 04-attribute-xss.md
-├── dom-xss/                # Отчеты по DOM-based XSS
+├── dom-xss/                  # Отчеты по DOM-based XSS
 │   ├── screenshots/
 │   ├── 01-dom-innerhtml.md
 │   ├── 02-dom-jquery.md
 │   ├── 03-dom-jquery-selector.md
 │   └── 04-document-write-select.md
-├── csrf/                   # Отчеты по CSRF
+├── csrf/                     # Отчеты по CSRF
 │   ├── screenshots/
 │   ├── 01-csrf-no-defenses.md
 │   ├── 02-csrf-method-override.md
 │   ├── 03-csrf-token-session.md
 │   ├── 04-csrf-samesite-lax.md
 │   └── 05-csrf-referer-validation.md
-├── ssrf/                   # Отчеты по SSRF
+├── ssrf/                     # Отчеты по SSRF
 │   ├── screenshots/
 │   ├── 01-basic-ssrf-local.md
 │   ├── 02-basic-ssrf-backend.md
 │   ├── 03-ssrf-blacklist.md
 │   ├── 04-ssrf-open-redirect.md
 │   └── 05-ssrf-whitelist.md
-├── blv/                    # Уязвимости бизнес-логики
+├── blv/                      # Уязвимости бизнес-логики
 │   ├── screenshots/
 │   ├── 01-excessive-trust.md
 │   ├── 02-high-level-logic.md
 │   ├── 03-workflow-validation.md
 │   └── 04-infinite-money.md
-├── dt/                     # Отчеты по обходу путей (Path Traversal)
+├── dt/                       # Отчеты по обходу путей (Path Traversal)
 │   ├── screenshots/
 │   ├── 01-simple-case.md
 │   ├── 02-absolute-path.md
@@ -85,7 +86,7 @@ appsec-writeups/
 │   ├── 04-non-recursive.md
 │   ├── 05-url-decode.md
 │   └── 06-null-byte.md
-├── lfi/                    # Отчеты по локальному включению файлов (Root-Me)
+├── lfi/                      # Отчеты по локальному включению файлов (Root-Me)
 │   ├── screenshots/
 │   ├── 01-lfi.md
 │   ├── 01-lfi.ru.md
@@ -94,6 +95,7 @@ appsec-writeups/
 │   ├── 03-lfi-wrappers.md
 │   └── 03-lfi-wrappers.ru.md
 └── README.md
+```
 
 ## 📝 Методология
 

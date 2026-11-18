@@ -2,7 +2,7 @@
 
 [Русская версия](README.ru.md)
 
-This repository contains my practical writeups and solutions for web security labs, primarily from **PortSwigger Web Security Academy** and **Root-Me**. 
+This repository contains my practical writeups and solutions for web security labs, primarily from **PortSwigger Web Security Academy** and **Root-Me**.
 
 It is part of my self-paced AppSec learning roadmap. The goal of this repository is to document my progress, demonstrate hands-on skills in identifying and exploiting web vulnerabilities, and serve as a personal knowledge base.
 
@@ -36,48 +36,49 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 
 ## 📂 Repository Structure
 
+```text
 appsec-writeups/
-├── sql-injection/          # In-band SQLi writeups
+├── sql-injection/            # In-band SQLi writeups
 │   ├── screenshots/
 │   └── 01-where-clause.md ...
-├── blind-sql-injection/    # Inferential (Blind) SQLi writeups
+├── blind-sql-injection/      # Inferential (Blind) SQLi writeups
 │   ├── screenshots/
-│   ├── scripts/            # Exploit automation scripts
+│   ├── scripts/              # Exploit automation scripts
 │   ├── 01-blind-time-retrieval.md
 │   └── ...
-├── xss/                    # Cross-Site Scripting writeups (Reflected / Stored)
+├── xss/                      # Cross-Site Scripting writeups (Reflected / Stored)
 │   ├── screenshots/
 │   ├── 01-reflected-xss.md
 │   ├── 02-stored-xss.md
 │   ├── 03-dom-xss.md
 │   └── 04-attribute-xss.md
-├── dom-xss/                # DOM-based XSS writeups
+├── dom-xss/                  # DOM-based XSS writeups
 │   ├── screenshots/
 │   ├── 01-dom-innerhtml.md
 │   ├── 02-dom-jquery.md
 │   ├── 03-dom-jquery-selector.md
 │   └── 04-document-write-select.md
-├── csrf/                   # CSRF writeups
+├── csrf/                     # CSRF writeups
 │   ├── screenshots/
 │   ├── 01-csrf-no-defenses.md
 │   ├── 02-csrf-method-override.md
 │   ├── 03-csrf-token-session.md
 │   ├── 04-csrf-samesite-lax.md
 │   └── 05-csrf-referer-validation.md
-├── ssrf/                   # SSRF writeups
+├── ssrf/                     # SSRF writeups
 │   ├── screenshots/
 │   ├── 01-basic-ssrf-local.md
 │   ├── 02-basic-ssrf-backend.md
 │   ├── 03-ssrf-blacklist.md
 │   ├── 04-ssrf-open-redirect.md
 │   └── 05-ssrf-whitelist.md
-├── blv/                    # Business Logic Vulnerabilities
+├── blv/                      # Business Logic Vulnerabilities
 │   ├── screenshots/
 │   ├── 01-excessive-trust.md
 │   ├── 02-high-level-logic.md
 │   ├── 03-workflow-validation.md
 │   └── 04-infinite-money.md
-├── dt/                     # Path Traversal writeups
+├── dt/                       # Path Traversal writeups
 │   ├── screenshots/
 │   ├── 01-simple-case.md
 │   ├── 02-absolute-path.md
@@ -85,7 +86,7 @@ appsec-writeups/
 │   ├── 04-non-recursive.md
 │   ├── 05-url-decode.md
 │   └── 06-null-byte.md
-├── lfi/                    # Local File Inclusion writeups (Root-Me)
+├── lfi/                      # Local File Inclusion writeups (Root-Me)
 │   ├── screenshots/
 │   ├── 01-lfi.md
 │   ├── 01-lfi.ru.md
@@ -94,6 +95,7 @@ appsec-writeups/
 │   ├── 03-lfi-wrappers.md
 │   └── 03-lfi-wrappers.ru.md
 └── README.md
+```
 
 ## 📝 Methodology
 

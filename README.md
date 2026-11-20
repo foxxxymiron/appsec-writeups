@@ -20,7 +20,8 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - [x] **Stage 12:** Business Logic Vulnerabilities - *Completed (see `blv/` folder)*
 - [x] **Stage 13:** Path Traversal - *Completed (see `dt/` folder)*
 - [x] **Stage 14:** File Inclusion (LFI) - *Completed (see `lfi/` folder)*
-- [ ] **Stage 15+:** RFI, XXE, Deserialization, etc. - *In progress*
+- [x] **Stage 15:** Clickjacking (UI Redressing) - *Completed (see `clickjacking/` folder)*
+- [ ] **Stage 16+:** RFI, XXE, Deserialization, etc. - *In progress*
 
 ## 🛠 Skills Demonstrated
 
@@ -32,6 +33,7 @@ It is part of my self-paced AppSec learning roadmap. The goal of this repository
 - **Business Logic Vulnerabilities:** Price tampering, negative quantities, workflow bypass, and infinite money logic flaws.
 - **Path Traversal:** Bypassing filters via absolute paths, non-recursive stripping, URL encoding, prefix validation, and null bytes.
 - **Local File Inclusion (LFI):** Bypassing `open_basedir` restrictions, double URL encoding to defeat traversal filters, PHP stream wrappers (`zip://`, `php://`, `data://`) to read arbitrary files and execute arbitrary code through file upload + inclusion chains.
+- **Clickjacking (UI Redressing):** Bypassing CSRF tokens via iframe overlays, pre-filled form manipulation, frame-buster script bypasses (`sandbox`), chaining clickjacking with DOM-based XSS, and multistep clickjacking attacks.
 - *More to come: Remote File Inclusion (RFI), XXE, Deserialization, etc.*
 
 ## 📂 Repository Structure
@@ -94,6 +96,18 @@ appsec-writeups/
 │   ├── 02-lfi-double-encoding.ru.md
 │   ├── 03-lfi-wrappers.md
 │   └── 03-lfi-wrappers.ru.md
+├── clickjacking/             # Clickjacking writeups (PortSwigger)
+│   ├── screenshots/
+│   ├── 01-basic-clickjacking-csrf.md
+│   ├── 01-basic-clickjacking-csrf.ru.md
+│   ├── 02-clickjacking-prefilled.md
+│   ├── 02-clickjacking-prefilled.ru.md
+│   ├── 03-clickjacking-frame-buster.md
+│   ├── 03-clickjacking-frame-buster.ru.md
+│   ├── 04-clickjacking-dom-xss.md
+│   ├── 04-clickjacking-dom-xss.ru.md
+│   ├── 05-multistep-clickjacking.md
+│   └── 05-multistep-clickjacking.ru.md
 └── README.md
 ```
 
@@ -184,6 +198,15 @@ For each lab, the writeup follows a standard structure:
 | 01 | Local File Inclusion (open_basedir bypass) | 30 pts | [View Writeup](lfi/01-lfi.md) |
 | 02 | Local File Inclusion - Double Encoding | 30 pts | [View Writeup](lfi/02-lfi-double-encoding.md) |
 | 03 | Local File Inclusion - Wrappers (zip://) | 40 pts | [View Writeup](lfi/03-lfi-wrappers.md) |
+
+### Clickjacking (UI Redressing) — PortSwigger
+| # | Lab Name | Difficulty | Link |
+|---|----------|------------|------|
+| 01 | Basic clickjacking with CSRF token protection | Practitioner | [View Writeup](clickjacking/01-basic-clickjacking-csrf.md) |
+| 02 | Clickjacking with form input data prefilled from a URL parameter | Practitioner | [View Writeup](clickjacking/02-clickjacking-prefilled.md) |
+| 03 | Clickjacking with a frame buster script | Practitioner | [View Writeup](clickjacking/03-clickjacking-frame-buster.md) |
+| 04 | Exploiting clickjacking vulnerability to trigger DOM-based XSS | Practitioner | [View Writeup](clickjacking/04-clickjacking-dom-xss.md) |
+| 05 | Multistep clickjacking | Practitioner | [View Writeup](clickjacking/05-multistep-clickjacking.md) |
 
 ---
 
